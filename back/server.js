@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
+
+
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -11,6 +14,7 @@ app.use(cors());
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 app.use(express.static(path.join(__dirname, '../front/public')));
+
 
 const imagesFilePath = path.join(__dirname, 'data', 'images.json');
 
@@ -52,6 +56,9 @@ app.get('/', (req, res) => {
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, '../front/public', 'index-admin.html'));
 }); */
+
+
+
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
