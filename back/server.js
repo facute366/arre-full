@@ -47,7 +47,7 @@ app.delete('/images/:index', (req, res) => {
 });
 
 // Ruta para servir index.html en la raíz 
-/*
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../front/public', 'index.html'));
 });
@@ -55,7 +55,7 @@ app.get('/', (req, res) => {
 // Ruta para servir index-admin.html en /admin
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, '../front/public', 'index-admin.html'));
-}); */
+}); 
 
 
 
